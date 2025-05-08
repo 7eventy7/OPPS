@@ -46,7 +46,9 @@ Customizing the mod is quite simple, both important files can be found in **/Scr
 - Simply open the **config.ini** file in any text editor and adjust the values to your desired preference, don't be afraid to tinker around with it
 - Refer to the **ConfigHelper.md** file which provides value ranges and descriptions for each parameter, making it easy to fine-tune your settings
 
-If you wish to edit just the fog, a single parameter change is usually enough for most users, see the following: *[Fog Reference](https://imgur.com/gallery/opps-oblivion-post-processing-suite-fog-reference-T6lMfeh)*
+If you wish to edit just the fog, a single parameter change is usually enough for most users, see the following: 
+
+*[Fog Reference](https://imgur.com/gallery/opps-oblivion-post-processing-suite-fog-reference-T6lMfeh)*
 
 ## Credits
 
