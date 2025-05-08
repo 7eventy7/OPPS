@@ -1,4 +1,5 @@
-# OPPS - Oblivion Post Processing Suite
+![opps-header](https://github.com/user-attachments/assets/e0ce1637-ee0a-4cd5-8a14-c44a0a979214)
+# Oblivion Post Processing Suite
 
 ## Overview
 A suite of extensively configurable parameters to fine-tune visual effects and post processing inside Unreal Engine. The default configuration pushes outdoor fog back to reveal more of the landscape, deepens shadows from lumen, and adds subtle lens flares to light sources. These are just some of the highlights, there are other subtle changes that you can configure if you'd like! Most visual effects in this mod have more than one parameter to alter their characteristics; currently this mod allows you to configure:
