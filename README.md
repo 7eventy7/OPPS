@@ -14,8 +14,9 @@ A suite of extensively configurable parameters to fine-tune visual effects and p
 - Ambient Occlusion
 - Depth of Field
 - Vignette
-- Screen Space Reflections
-- Film Grain, Skylight
+- Reflections
+- Film Grain
+- Skylight
 - Eye Adaptation
 
 ## Notes
