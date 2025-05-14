@@ -69,7 +69,7 @@ This mod was inspired by and builds upon the excellent work of:
 - [Lumen Remastered](https://www.nexusmods.com/oblivionremastered/mods/1129) - For inspiring the intuitive approach to lua scripting configuration
 
 ## Compatibility
-Compatible with any mods that do not edit Unreal Engine visual effects. Works best alongside ReShade presets to recolor the world environment.
+Compatible with any mods that do not edit Unreal Engine visual effects; this includes **Engine.ini** edits that change the same parameters as this mod. Works best alongside ReShade presets to recolor the world environment.
 
 ## Contributing
 We welcome contributions to the Oblivion Post Processing Suite! Whether you're fixing bugs, adding new features, or improving documentation, your help is appreciated. To contribute, simply fork the repository, make your changes, and submit a pull request. For major changes, please open an issue first to discuss what you'd like to change. Be sure to test your modifications thoroughly before submitting. Join our community and help make OPPS even better!
