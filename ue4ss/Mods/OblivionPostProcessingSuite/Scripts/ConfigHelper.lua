@@ -6,13 +6,18 @@ local function getRootDirectory()
     return str:match("(.*[/\\])") or ""
 end
 
-local function readIniFile()
+local activeConfig = "config.ini"
+
+local function readIniFile(configFilename)
+    configFilename = configFilename or activeConfig
+    activeConfig = configFilename
+    
     local root = getRootDirectory()
-    local configPath = root .. "config/config.ini"
+    local configPath = root .. "config/" .. configFilename
     
     local file = io.open(configPath, "r")
     if not file then
-        print("[OPPS] Error: Could not open config.ini")
+        print("[OPPS] Error: Could not open " .. configFilename)
         return {}
     end
     
@@ -37,6 +42,23 @@ local function readIniFile()
     return data
 end
 
+local function toggleConfigFile()
+    if activeConfig == "config.ini" then
+        activeConfig = "default.ini"
+    else
+        activeConfig = "config.ini"
+    end
+    
+    print("[OPPS] Switched to " .. activeConfig)
+    return readIniFile(activeConfig)
+end
+
+local function getActiveConfig()
+    return activeConfig
+end
+
 return {
-    readIniFile = readIniFile
+    readIniFile = readIniFile,
+    toggleConfigFile = toggleConfigFile,
+    getActiveConfig = getActiveConfig
 }

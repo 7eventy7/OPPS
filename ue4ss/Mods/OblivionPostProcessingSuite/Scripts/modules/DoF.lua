@@ -4,10 +4,7 @@
 local module = {}
 
 function module.UpdateDoFEffects(postProcess, config, inConversation, effectsEnabled)
-    if not effectsEnabled then
-        module.ResetDoFSettings(postProcess)
-        return
-    end
+    module.ResetDoFSettings(postProcess)
     
     if config["DepthOfField"] and config["DepthOfField"].Enabled == "true" and not inConversation then
         postProcess.Settings.bOverride_DepthOfFieldFocalDistance = true

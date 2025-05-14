@@ -4,10 +4,7 @@
 local module = {}
 
 function module.ApplyNonDoFEffects(postProcess, config, effectsEnabled)
-    if not effectsEnabled then
-        module.ResetPostProcessEffects(postProcess)
-        return
-    end
+    module.ResetPostProcessEffects(postProcess)
     
     if config["LensFlare"] and config["LensFlare"].Enabled == "true" then
         postProcess.Settings.bOverride_LensFlareIntensity = true
@@ -51,17 +48,19 @@ function module.ApplyNonDoFEffects(postProcess, config, effectsEnabled)
         postProcess.Settings.VignetteIntensity = tonumber(config["Vignette"].Intensity)
     end
     
-    if config["Reflections"] and config["Reflections"].Mode == "ScreenSpace" then
-        postProcess.Settings.bOverride_ScreenSpaceReflectionQuality = true
-        postProcess.Settings.bOverride_ScreenSpaceReflectionMaxRoughness = true
-        postProcess.Settings.bOverride_ScreenSpaceReflectionIntensity = true
-        postProcess.Settings.ScreenSpaceReflectionQuality = tonumber(config["Reflections"].SSQuality)
-        postProcess.Settings.ScreenSpaceReflectionMaxRoughness = tonumber(config["Reflections"].SSMaxRoughness)
-        postProcess.Settings.ScreenSpaceReflectionIntensity = tonumber(config["Reflections"].SSIntensity)
-    else
-        postProcess.Settings.bOverride_ScreenSpaceReflectionQuality = false
-        postProcess.Settings.bOverride_ScreenSpaceReflectionMaxRoughness = false
-        postProcess.Settings.bOverride_ScreenSpaceReflectionIntensity = false
+    if config["Reflections"] then
+        if config["Reflections"].Mode == "ScreenSpace" then
+            postProcess.Settings.bOverride_ScreenSpaceReflectionQuality = true
+            postProcess.Settings.bOverride_ScreenSpaceReflectionMaxRoughness = true
+            postProcess.Settings.bOverride_ScreenSpaceReflectionIntensity = true
+            postProcess.Settings.ScreenSpaceReflectionQuality = tonumber(config["Reflections"].SSQuality)
+            postProcess.Settings.ScreenSpaceReflectionMaxRoughness = tonumber(config["Reflections"].SSMaxRoughness)
+            postProcess.Settings.ScreenSpaceReflectionIntensity = tonumber(config["Reflections"].SSIntensity)
+        else
+            postProcess.Settings.bOverride_ScreenSpaceReflectionQuality = false
+            postProcess.Settings.bOverride_ScreenSpaceReflectionMaxRoughness = false
+            postProcess.Settings.bOverride_ScreenSpaceReflectionIntensity = false
+        end
     end
     
     if config["FilmGrain"] and config["FilmGrain"].Enabled == "true" then
