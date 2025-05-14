@@ -5,7 +5,7 @@
 - Initial mod release
 
 ## 1.1.0
-- Added hotkey to toggle suite visuals
+- Added ALT+P hotkey to toggle suite visuals
 - Post Processing effects now apply indoors
 - Depth of Field is now disabled during dialogue
 
@@ -23,7 +23,7 @@
 
 ## 1.3.0
 - Added ALT+O hotkey to toggle hot reload config
-- Added ALT+P hotkey to toggle in game hud
+- Added ALT+L hotkey to toggle in game hud
 - Added full UE4SS path to support mod managers
 - Added new file to read the vanilla values: defaults.ini
 - Added new module: LightSources
@@ -38,4 +38,4 @@
 - Changed default LensFlare BokehSize to 3.0
 - Changed default LensFlare Threshold to 20.0
 - Fixed crashing to desktop when loading certain areas
-- Reformatted ConfigReference.md for better readibility
+- Reformatted reference.md for better readibility
